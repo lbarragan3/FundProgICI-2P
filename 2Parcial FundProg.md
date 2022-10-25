@@ -98,23 +98,23 @@ void main(List<String> args) {
 ```dart
 void main(List<String> args) {
   int s = 0, c = 1;
-
-  do {
+  while (c <= 5) {
     s = s + c * 2;
     c = c + 1;
-  } while (c <= 5);
-  print("la suma de numeros pares es:$s");
+  }
+  print("resultado de la suma de numeros pares:$s");
 }
 ```
 **_Ciclo do-while:_**
 ```dart
 void main(List<String> args) {
   int s = 0, c = 1;
-  while (c <= 5) {
+
+  do {
     s = s + c * 2;
     c = c + 1;
-  }
-  print("resultado de la suma de numeros pares:$s");
+  } while (c <= 5);
+  print("la suma de numeros pares es:$s");
 }
 ```
 
@@ -222,16 +222,56 @@ Usar el símbolo de proceso para crear un array para los 10 elementos donde se a
 
 #### 1.3 Códigos (python, dart o C):
 **_Ciclo for:_**
-```
-
+```dart
+void main() {
+  var arra = new List.filled(10, 0);
+  stdout.write("Dame diez numeros\n ");
+  stdout.write("----------\n");
+  for (var i = 0; i <= 9; i++) {
+    String? s = stdin.readLineSync();
+    if (s != null) {
+      int n = int.parse(s);
+      arra[i] = n;
+    }
+  }
+  stdout.write("aqui esta la lista, $arra");
+}
 ```
 **_Ciclo while:_**
-```
-
+```dart
+void main() {
+  var arra = new List.filled(10, 0);
+  stdout.write("Dame diez numeros\n ");
+  stdout.write("----------\n");
+  int i = 0;
+  while (i <= 9) {
+    String? s = stdin.readLineSync();
+    if (s != null) {
+      int ner = int.parse(s);
+      arra[i] = ner;
+    }
+    i++;
+  }
+  stdout.write("Tu lista es, $arra ");
+}
 ```
 **_Ciclo do-while:_**
-```
-
+```dart
+void main() {
+  var arra = new List.filled(10, 0);
+  stdout.write("Dame diez numeros\n ");
+  stdout.write("----------\n");
+  int i = 0;
+  do {
+    String? s = stdin.readLineSync();
+    if (s != null) {
+      int n = int.parse(s);
+      arra[i] = n;
+      i++;
+    }
+  } while (i <= 9);
+  stdout.write("Tu lista es $arra ");
+}
 ```
 
 #### 1.4 Entradas
@@ -260,10 +300,9 @@ En el símbolo de proceso asignar un array de 11 elementos y el contador, verifi
 
 #### 1.3 Códigos (python, dart o C):
 **_Ciclo for:_**
-```
+```dart
 void main() {
   var arr = <int>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  int c = 10;
   for (var i = 10; i >= 0; i--) {
     arr[10 - i] = i;
   }
@@ -271,7 +310,7 @@ void main() {
 }
 ```
 **_Ciclo while:_**
-```
+```dart
 void main() {
   var arr = <int>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   int c = 10;
@@ -283,7 +322,7 @@ void main() {
 }
 ```
 **_Ciclo do-while:_**
-```
+```dart
 void main() {
   var arr = <int>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   int c = 10;
@@ -321,73 +360,65 @@ Usar el símbolo de proceso para asignar un array de 10 elementos, un contador y
 
 #### 1.3 Códigos (python, dart o C):
 **_Ciclo for:_**
-```
-listanumeros = []
-numerousuario = int(input("introdusca un numero: "))
-listanumeros.append(numerousuario)
-numerousuario = int(input("introdusca otro numero: "))
-listanumeros.append(numerousuario)
-numerousuario = int(input("introdusca un numero: "))
-listanumeros.append(numerousuario)
-numerousuario = int(input("introdusca otro numero: "))
-listanumeros.append(numerousuario)
-numerousuario = int(input("introdusca un numero: "))
-listanumeros.append(numerousuario)
-numerousuario = int(input("introdusca otro numero: "))
-listanumeros.append(numerousuario)
-numerousuario = int(input("introdusca un numero: "))
-listanumeros.append(numerousuario)
-numerousuario = int(input("introdusca otro numero: "))
-listanumeros.append(numerousuario)
-numerousuario = int(input("introdusca un numero: "))
-listanumeros.append(numerousuario)
-numerousuario = int(input("introdusca otro numero: "))
-listanumeros.append(numerousuario)
-
-print(f"los numeros son {listanumeros}")
-
-def pares(listanumeros):
-    listanumeros = []
+```python
+numeros = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
 
-for n in listanumeros:
-    if n % 2 == 0:
-        print("Estos numeros son pares"+ "  " + str(n))
+
+def extraer_pares(lista):
+    pares = []
+
+    for n in lista:
+        if n % 2 == 0:
+            pares.append(n)
+
+    return pares
+
+print()
+
+resultado = extraer_pares(numeros)
+
+print("Contenido de la variable`resultado`:", resultado)
+print("Cantidad de elementos en la lista `resultado`:", len(resultado))
 ```
 **_Ciclo while:_**
-```
-listanumeros = []
-numerousuario = int(input("introdusca un numero: "))
-listanumeros.append(numerousuario)
-decision = input("¿desea añadadir mas numeros?: ")
+```python
+numeros = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
-while decision == "s" or decision == "s":
-    numerousuario = int(input("introdusca otro numero: "))
-    listanumeros.append(numerousuario)
-    decision = input("¿desea añadir otro numero?: ")
+print("Contenido de la variable`numeros`:", numeros)
+print("Cantidad de elementos en la lista `numeros`:", len(numeros))
+
+def extraer_pares(lista):
+    pares = []
+
+    while(true):
+        if n % 2 == 0:
+            pares.append(n)
+
+    return pares
+
+print()
 
 
-print(f"los numeros son {listanumeros}")
-for n in listanumeros:
-    if n % 2 == 0:
-        print("Este numero de la lista es par" + str(n))
-        
 
-
-input("por favor, precione una tecla para salir.")
+print("Contenido de la variable`resultado`:", resultado)
+print("Cantidad de elementos en la lista `resultado`:", len(resultado))
 ```
 **_Ciclo do-while:_**
-```
-print("PARES")
-numero_1 = int(input("Escriba un número entero: "))
-numero_2 = int(input(f"Escriba un número entero mayor o igual que {numero_1}: "))
+```dart
+void main() {
+  var array = [];
+  var c = 0;
+  do {
+    int n = int.parse(stdin.readLineSync()!);
 
-if numero_2 < numero_1:
-        print(f"¡Le he pedido un número entero mayor o igual que {numero_1}!")
-else:
-        for i in range(numero_1, numero_2 + 1):
-            if i % 2 == 0:
-                print(f"El número {i} es par.")
+    if (n % 2 == 0) {
+      array.add(n);
+      c = c + 1;
+    }
+  } while (c <= 9);
+  print(array);
+}
 ```
 
 #### 1.4 Entradas
@@ -416,16 +447,97 @@ Crear un array de 15 elementos, un contador y una suma para contador con el sím
 
 #### 1.3 Códigos (python, dart o C):
 **_Ciclo for:_**
-```
+```python
+alumnos = list(range(15))
+p_aprobados = 0
+j = 0
 
+for i in alumnos: 
+    while(True):
+        calificacion = int(input("Ingresa la calificación >>"))
+        if (calificacion >= 0 and calificacion <= 10):
+            break
+        else:
+            print("Calificación fuera de rango. Intenta de nuevo")
+ 
+    if (calificacion < 6):
+     alumnos[i] = "R"
+    else:
+     p_aprobados = calificacion + p_aprobados
+     j = j + 1
+     alumnos[i] = "A"
+
+print("\033[33;1m",alumnos,"\033[39m")
+print("El promedio de calificación de los aprobados es de >>",round(p_aprobados/j,2))
+print("El total de aprobados fueron >> ",j)
+print("El total de reprobados fueron >> ",(len(alumnos)-j))
 ```
 **_Ciclo while:_**
-```
+```python
+alumnos = list(range(15))
+p_aprobados = 0
+j = 0
 
+for i in alumnos: 
+    while(True):
+        calificacion = int(input("Ingresa la calificación >>"))
+        if (calificacion >= 0 and calificacion <= 10):
+            break
+        else:
+            print("Calificación fuera de rango. Intenta de nuevo")
+ 
+    if (calificacion < 6):
+     alumnos[i] = "R"
+    else:
+     p_aprobados = calificacion + p_aprobados
+     j = j + 1
+     alumnos[i] = "A"
+
+print("\033[33;1m",alumnos,"\033[39m")
+print("El promedio de calificación de los aprobados es de >>",round(p_aprobados/j,2))
+print("El total de aprobados fueron >> ",j)
+print("El total de reprobados fueron >> ",(len(alumnos)-j))
 ```
 **_Ciclo do-while:_**
-```
-
+```dart
+void main() {
+  double PromA = 0;
+  var contr = 0;
+  double sumaA = 0;
+  double contA = 0;
+  double cal1 = 0;
+  double cal2 = 1;
+  var cont = 0;
+  stdout.write("Dame las calificaciones\n ");
+  stdout.write("----------\n");
+  do {
+    double c = double.parse(stdin.readLineSync()!);
+    cont = cont +1;
+    if (c > 10) {
+      print('La calificacion no puede ser mayor a 10');
+      cont = cont - 1;
+    }
+    if (c < 0) {
+      print('La calificacion no puede ser menor a 0');
+      cont = cont - 1;
+    }
+    if (c < 6 && c > 0) {
+      contr = contr + 1;
+    }
+    if (c <= 10 && c >= 6) {
+      cal1 = c;
+      sumaA = sumaA + cal1;
+      contA++;
+    }
+    if (cal1 > cal2) {
+      cal2 = cal1;
+    }
+  } while (cont <= 14);
+  PromA = sumaA / contA;
+  print('El promedio de aprobados es $PromA');
+  print('La calificacion mas alta es $cal2');
+  print('La cantidad de reprobados son $contr');
+}
 ```
 
 #### 1.4 Entradas
@@ -451,16 +563,158 @@ Calificaciones, promedio de las calificaciones aprobatorias y cantidad de alumno
 
 #### 1.3 Códigos (python, dart o C):
 **_Ciclo for:_**
-```
+```python
+sp=0
+cp=0
+pp=0
+si=0
+ci=0
+pi=0
+li=-1
+ls=-1
+n=-1
+num=-1
 
+while(li<0):
+    li = int(input("Limite inferior: "))
+    
+    if(li<0):
+        print("Tiene que ser mayor a 0")
+        
+while(ls<li):
+    ls = int(input("Limite superior: "))
+    
+    if(ls<li):
+        print("Tiene que ser mayor que el limite inferior")
+        
+while(n<0):
+    n = int(input("¿Cuantos numeros? "))
+    
+    if(n<0):
+        print("Tiene que ser mayor a 0")
+    
+for i in range(n): 
+    while(num<=li or num>=ls):
+        num = int(input("Dame un numero de LI y LS: "))
+        
+        if(num<=li or num>=ls):
+            print("Tiene que estar dentro del LI al LS")
+
+    if(num%2==0):
+        sp=sp+num
+        cp=cp+1
+    else:
+        si=si+num
+        ci=ci+1
+        
+    num=-1       
+         
+if(sp==0 or cp==0):
+    pp=0
+else:
+    pp=sp/cp
+    
+if(si==0 or ci==0):
+    pi=0
+else:
+    pi=si/ci
+    
+if(pp>pi):
+    print("El PP es mayor que el PI")
+else:
+    print("El PI es mayor que el PP")
 ```
 **_Ciclo while:_**
-```
+```python
+print("Dame Límite inferior: ")
+Li = int(input())
+while Li<0:
+    print("El límite inferior debe ser mayor a 0")
+    print("Dame Límite inferior: ")
+    Li = int(input())
 
+print("Dame límite superior: ")
+Ls = int(input())
+while Ls<=Li:
+    print("El límite superior no puede ser menor o igual al limite inferior")
+    print("Dame límite superior: ")
+    Ls = int(input())
+
+pares = 0
+impares = 0
+
+lista=[]
+for x in range(10):
+    valor=int(input("Ingrese un valor entero: "))
+    lista.append(valor)
+print(lista)
+
+for a in lista:
+    if a % 2 == 0:
+        pares = pares + a
+    else:
+        impares = impares + a
+print("La suma de los números pares es: ",pares)
+print("La suma de los números impares es: ",impares)
+
+prom_pares = pares / a
+prom_impares = impares / a
+
+print("El promedio de los números pares es: ",prom_pares)
+print("El promedio de los números impares es: ",prom_impares)
+
+if prom_pares > prom_impares:
+    print("El promedio de los pares es mayor que el promedio de los impares.")
+else:
+    print("El promedio de los números impares es mayor que el promedio de los pares.")
 ```
 **_Ciclo do-while:_**
-```
+```dart
+void main() {
+  double sumap = 0;
+  double sumai = 0;
+  var contp = 0;
+  var conti = 0;
+  double promp = 0;
+  double promi = 0;
+  print('Introduce el limite inferior, mayor a 0');
+  var li = int.parse(stdin.readLineSync()!);
+  if (li < 0) {
+    print('tu limite inferior debe ser mayor a 0');
+  }
+  if (li > 0) {
+    print('Ahora introduce un limite superior');
+    var ls = int.parse(stdin.readLineSync()!);
+    if (ls < li) {
+      print('tu limite superior debe ser mayor a tu limite inferior');
+    }
+    var cont = li;
+    do {
+      if (cont <= ls) {
+        sumai = sumai + cont;
+        conti = conti + 1;
+      }
+      if (cont % 2 == 0) {
+        sumap = sumap + cont;
+        contp = contp + 1;
+        sumai = sumai - cont;
+        conti = conti - 1;
+      }
+      cont = cont + 1;
+    } while (cont <= ls);
 
+    promi = sumai / conti;
+    print('los impares son $conti y su promedio es $promi');
+    promp = sumap / contp;
+    print('los pares son $contp y su promedio es $promp');
+    if (promp < promi) {
+      print('$promi es mayor');
+    }
+    if (promp > promi) {
+      print('el promedio $promp es mayor');
+    }
+  }
+}
 ```
 
 #### 1.4 Entradas
