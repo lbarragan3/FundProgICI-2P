@@ -1,3 +1,5 @@
+
+
 # **Ejercicios de Clase**
 ### **Resolución de problemas de clase con Diagramas de Flujo de Datos**
 ## **Ejercicio 1.**
@@ -554,12 +556,15 @@ Calificaciones, promedio de las calificaciones aprobatorias y cantidad de alumno
 #### 1.2 Diagrama de Flujo de Datos:
 **_Ciclo for:_**
 
+![E8_for](https://user-images.githubusercontent.com/113486125/198382593-2f8fdfa5-ddd5-47f6-8e37-005659b8dbc3.png)
 
 **_Ciclo while:_**
 
+![E8_while](https://user-images.githubusercontent.com/113486125/198385225-d38f30fe-9ac7-4f07-9a1a-6b94a49904e2.png)
 
 **_Ciclo do-while:_**
 
+![E8_dowhile](https://user-images.githubusercontent.com/113486125/198385245-29ab15f4-210e-495e-8269-6fa6dec778da.png)
 
 #### 1.3 Códigos (python, dart o C):
 **_Ciclo for:_**
@@ -721,3 +726,153 @@ void main() {
 Ninguna
 #### Salidas
 30
+
+
+## **Ejercicio 9.**
+#### Obtener la frecuencia de n calificaciones entre [1,10]. Indique la cantidad de aprobados, la cantidad de reprobados, el promedio de aprobados y promedio general.
+#### 1.1 Análisis
+Usar el símbolo de proceso para asignar un array para las calificaciones, pedir al usuario que ingrese las calificaciones, validar que estas esten entre 0 y 10, además de verificar en cada calificación ingressada si es mayor-igual a 6 para ingresar a las calificaciones aprobatorias, de lo contrario almacenar en las calificaciones reprobatorias, hacer las operacines correspondientes para obtener los promedios de las calificaciones aprobatorias y general , imprimir todo para finalizar.
+#### Diagrama ciclo for:
+#### 1.2 Diagrama de Flujo de Datos:
+**_Ciclo for:_**
+
+![E9_for](https://user-images.githubusercontent.com/113486125/198375938-41c64dba-5ff1-4520-b4cd-3fce7132bef3.png)
+
+**_Ciclo while:_**
+
+![E9_while](https://user-images.githubusercontent.com/113486125/198390942-490a416f-0774-4449-8c87-7ae43e8b6bdf.png)
+
+**_Ciclo do-while:_**
+
+![E9_dowhile](https://user-images.githubusercontent.com/113486125/198390978-e3a3240f-73c2-4960-9a1e-b3807d73b44b.png)
+
+#### 1.3 Códigos (python, dart o C):
+**_Ciclo for:_**
+```python
+Calificaciones=int(input("Ingrese la cantidad de calificaciones"))
+vec=[]
+n=0
+
+for i in range(1,Calificaciones+1):
+    calificacion=int(input("Calificacion: "))
+    n=n+calificacion
+    vec.append(calificacion)
+
+promedio=n/len(vec)
+
+npromedio=0
+for j in vec:
+    if j>promedio:
+        npromedio=npromedio+1
+
+aprobado=0
+
+#Primero inicializas el contador
+promedioAprobados = 0
+for h in vec:
+    if h>5:
+        aprobado=aprobado+1
+        #Va sumando cada unas de las notas
+        promedioAprobados = promedioAprobados + h
+
+#Luego saca el promedio sumatoria / cantidad de aprobados 
+promedioAprobados = promedioAprobados / aprobado
+
+reprobado=0
+for k in vec:
+    if k<5:
+        reprobado=reprobado+1
+
+print("Max Calificacion", max(vec))
+print("Min calificacion", min(vec))
+print("Promedio:", promedio)
+print("Superiores a promedio:", npromedio)
+print("Cantidad de aprobados:", aprobado)
+print("Promedio de aprobados:", promedioAprobados)
+print("Desaprobados:", reprobado)
+```
+**_Ciclo while:_**
+```python
+Calificaciones=int(input("Ingrese la cantidad de calificaciones"))
+vec=[]
+n=0
+cont = 0
+while(cont < Calificaciones):
+    calificacion=int(input("Calificacion: "))
+    n=n+calificacion
+    vec.append(calificacion)
+    cont += 1
+
+promedio=n/len(vec)
+
+npromedio=0
+for j in vec:
+    if j>promedio:
+        npromedio=npromedio+1
+
+aprobado=0
+
+#Primero inicializas el contador
+promedioAprobados = 0
+for h in vec:
+    if h>5:
+        aprobado=aprobado+1
+        #Va sumando cada unas de las notas
+        promedioAprobados = promedioAprobados + h
+
+#Luego saca el promedio sumatoria / cantidad de aprobados 
+promedioAprobados = promedioAprobados / aprobado
+
+reprobado=0
+for k in vec:
+    if k<5:
+        reprobado=reprobado+1
+
+print("Max Calificacion", max(vec))
+print("Min calificacion", min(vec))
+print("Promedio:", promedio)
+print("Superiores a promedio:", npromedio)
+print("Cantidad de aprobados:", aprobado)
+print("Promedio de aprobados:", promedioAprobados)
+print("Desaprobados:", reprobado)
+```
+**_Ciclo do-while:_**
+```python
+Calificaciones=int(input("Ingrese la cantidad de calificaciones"))
+vec=[]
+n=0
+
+cont = 0
+while(True):
+    calificacion=int(input("Calificacion: "))
+    n=n+calificacion
+    vec.append(calificacion)
+    cont += 1
+    if(cont>=Calificaciones):
+        break;
+        
+aprobado=0
+
+promedioAprobados = 0
+for h in vec:
+    if h>=5:
+        aprobado=aprobado+1
+        promedioAprobados = promedioAprobados + h
+
+promedioAprobados = promedioAprobados / aprobado
+
+reprobado=0
+for k in vec:
+    if k<=5:
+        reprobado=reprobado+1
+
+print("Cantidad de aprobados:", aprobado)
+print("Cantidad de reprobados:", reprobado)
+print("Promedio de aprobados:", promedioAprobados)
+```
+
+#### 1.4 Entradas
+Calificaciones.
+#### Salidas
+cantidad de reprobados, cantidad de aprobados, promedio general y de aprobados.
+
