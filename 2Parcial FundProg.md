@@ -876,32 +876,32 @@ Calificaciones.
 cantidad de reprobados, cantidad de aprobados, promedio general y de aprobados.
 
 
-#**_Ejercicios de repaso._**
-##**Ejercicio 10.**
+# **_Ejercicios de repaso._**
+## **Ejercicio 10.**
 #### Ingresar dos números y di cuál es mayor.
 #### Diagrama:
 
 ![E10](https://user-images.githubusercontent.com/113486125/198499421-95fc11ba-971d-4db2-84ea-7238c49c4684.png)
 
-##**Ejercicio 11.**
+## **Ejercicio 11.**
 #### Capture 10 números enteros positivos.
 #### Diagrama:
 
 ![E11](https://user-images.githubusercontent.com/113486125/198499569-904e0331-79d6-4c7d-b9ba-81a98c071cae.png)
 
-##**Ejercicio 12.**
+## **Ejercicio 12.**
 #### Capture 10 números enteros positivos, diga cual es mayor y cual es menor.
 #### Diagrama:
 
 ![E12](https://user-images.githubusercontent.com/113486125/198499603-e93f42f3-2b82-4057-9e6f-63c14683ba6b.png)
 
-##**Ejercicio 13.**
+## **Ejercicio 13.**
 #### Calcular la ditancia mayor de dos números consecutivos en una lista de 10 números.
 #### Diagrama:
 
 ![E13](https://user-images.githubusercontent.com/113486125/198499644-9c62d0e8-6f8b-4c47-a8de-b3bac1819e9b.png)
 
-##**Ejercicio 14.**
+## **Ejercicio 14.**
 #### Escribe un dfd que escriba la siguiente forma:
 
 #### Diagrama:
