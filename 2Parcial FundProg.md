@@ -1,5 +1,3 @@
-
-
 # **Ejercicios de Clase**
 ### **Resolución de problemas de clase con Diagramas de Flujo de Datos**
 ## **Ejercicio 1.**
@@ -551,7 +549,7 @@ Calificaciones, promedio de las calificaciones aprobatorias y cantidad de alumno
 ## **Ejercicio 8.**
 #### Capture n números en el rango [Li,Ls] donde: -Li = Limite inferior -Ls limite superior para li<ls y l0, obtenga: Cantidad de números pares y su promedio, Cantidad de números impares y su promedio y ¿Qué promedio es mayor?
 #### 1.1 Análisis
-[Texto]
+Usar el símbolo de proceso para asignar suma para pares e impares, un contador para pares e impares, y el promedio para pares e impares, pedir al usuario limite inferior y superior, verificar que Li sea mayor a cero y Ls mayor a Li; pedir al usuario que ingrese los números (pedir un límite para que el ciclo no sea infinito). Comprobar cuántos números son pares y cuántos impares, obtener el promedio de los pares y de los impares, comprobar si el promedio de los pares es mayor o el de los impares, imprimir cual es mayor.
 #### Diagrama ciclo for:
 #### 1.2 Diagrama de Flujo de Datos:
 **_Ciclo for:_**
@@ -723,9 +721,10 @@ void main() {
 ```
 
 #### 1.4 Entradas
-Ninguna
+Limite inferior y superior, números.
 #### Salidas
-30
+Lista de números, promedios de los números pares e impares (por separado), y cuál promedio es mayor.
+
 
 
 ## **Ejercicio 9.**
